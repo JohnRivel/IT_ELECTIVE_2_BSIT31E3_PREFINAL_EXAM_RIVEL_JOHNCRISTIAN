@@ -19,6 +19,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "C"
             },
+            new Question
+            {
+                Id = 2,
+                Text = "Which approach is being used when an existing database is used to generate EF Core entity classes?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "Code-First" },
+                    { "B", "Database-First" },
+                    { "C", "Model-First" },
+                    { "D", "Controller-First" },
+                },
+                Answer = "B"
+            },
         };
     }
 }
