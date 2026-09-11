@@ -97,6 +97,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "B"
             },
+              new Question
+            {
+                Id = 8,
+                Text = "In the following example, what is SectionId?  public int SectionId { get; set; }  public Section Section { get; set; }",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "Primary key of Student" },
+                    { "B", "Foreign key referencing Section" },
+                    { "C", "Navigation property" },
+                    { "D", "Database connection string" },
+                },
+                Answer = "B"
+            },
         };
     }
 }
