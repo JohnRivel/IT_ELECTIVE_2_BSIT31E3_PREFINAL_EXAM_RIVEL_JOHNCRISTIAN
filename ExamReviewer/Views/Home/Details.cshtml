@@ -1,0 +1,28 @@
+﻿@model Question
+@{
+    ViewData["Title"] = $"Question#{Model.Id:00}";
+}
+
+<div class="case-file">
+    <span class="stamp">Question#@Model.Id.ToString("00")</span>
+
+    <h2>The Charge</h2>
+    <p>@Model.Text</p>
+
+    <h3>The Evidence</h3>
+    <ul class="choices">
+        @foreach (var choice in Model.Choices.OrderBy(c => c.Key))
+        {
+            var isAnswer = choice.Key == Model.Answer;
+            <li class="@(isAnswer ? "answer" : "")">
+                <span class="letter">@choice.Key</span>@choice.Value
+                @if (isAnswer)
+                {
+                    <strong class="answer-tag">✓ Answer</strong>
+                }
+            </li>
+        }
+    </ul>
+
+    <a class="back-link" href="@Url.Action("Index", "Home")">&larr; Back to Home</a>
+</div>

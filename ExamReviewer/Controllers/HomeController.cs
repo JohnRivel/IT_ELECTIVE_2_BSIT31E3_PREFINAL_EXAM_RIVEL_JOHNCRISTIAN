@@ -1,6 +1,5 @@
-using ExamReviewer.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using ExamReviewer.Data;
 
 namespace ExamReviewer.Controllers
 {
@@ -8,18 +7,23 @@ namespace ExamReviewer.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var questions = QuestionBank.All.OrderBy(q => q.Id).ToList();
+            return View(questions);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Details(int id)
         {
-            return View();
+            var question = QuestionBank.All.FirstOrDefault(q => q.Id == id);
+            if (question == null)
+            {
+                return NotFound();
+            }
+            return View(question);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }
