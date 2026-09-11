@@ -32,6 +32,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "B"
             },
+             new Question
+            {
+                Id = 3,
+                Text = "What is the primary purpose of Entity Framework Core?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "To create HTML pages automatically" },
+                    { "B", "To replace the MVC Controller" },
+                    { "C", "To map objects in code to relational database data" },
+                    { "D", "To replace the C# compiler" },
+                },
+                Answer = "C"
+            },
         };
     }
 }
