@@ -240,6 +240,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "B"
             },
+                  new Question
+            {
+                Id = 19,
+                Text = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "Display the student's information anyway" },
+                    { "B", "Display a Not Found (404) response/page" },
+                    { "C", "Delete Student 999" },
+                    { "D", "Create Student 999 automatically" },
+                },
+                Answer = "B"
+            },
         };
     }
 }
