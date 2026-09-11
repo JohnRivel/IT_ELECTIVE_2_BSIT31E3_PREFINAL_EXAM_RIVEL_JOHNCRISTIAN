@@ -110,6 +110,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "B"
             },
+              new Question
+            {
+                Id = 9,
+                Text = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "It stores the database password" },
+                    { "B", "It represents a relationship to another entity" },
+                    { "C", "It creates a new database" },
+                    { "D", "It validates the student's name" },
+                },
+                Answer = "B"
+            },
         };
     }
 }
