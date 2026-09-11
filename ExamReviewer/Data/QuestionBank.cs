@@ -214,6 +214,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "A"
             },
+                 new Question
+            {
+                Id = 17,
+                Text = "What is the purpose of a try...catch block in a controller?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "To create navigation properties" },
+                    { "B", "To catch and handle exceptions that may occur during execution" },
+                    { "C", "To generate database tables" },
+                    { "D", "To perform client-side validation" },
+                },
+                Answer = "B"
+            },
         };
     }
 }
