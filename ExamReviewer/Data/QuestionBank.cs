@@ -45,6 +45,19 @@ namespace ExamReviewer.Data
                 },
                 Answer = "C"
             },
+              new Question
+            {
+                Id = 4,
+                Text = "Which EF Core component is primarily responsible for communicating with the database?",
+                Choices = new Dictionary<string, string>
+                {
+                    { "A", "DbContext" },
+                    { "B", "DbSetView" },
+                    { "C", "ControllerContext" },
+                    { "D", "RazorContext" },
+                },
+                Answer = "A"
+            },
         };
     }
 }
